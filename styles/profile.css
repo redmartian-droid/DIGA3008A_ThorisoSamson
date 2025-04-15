@@ -48,15 +48,15 @@ main img {
 }
 
 @media (max-width: 768px) {
-  .profile-container {
+  .profile-h {
     flex-direction: column;
     align-items: center;
   }
 
-  .divider {
-    width: 80%;
-    height: 5px;
-    margin: 30px 0;
+  .split-screen {
+    width: 0%;
+    min-height: 0px;
+    margin: 0px 0px;
   }
 
   main {
