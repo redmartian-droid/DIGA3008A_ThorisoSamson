@@ -62,7 +62,7 @@ header {
   color: #000000;
 }
 
-ul {
+header ul {
   list-style: none;
   height: 100%;
   display: flex;
@@ -70,16 +70,16 @@ ul {
   justify-content: space-around;
 }
 
-ul a {
+header ul a {
   color: #000000;
 }
 
-ul li {
+header ul li {
   padding: 20px;
   margin-left: 10px;
 }
 
-ul li:hover {
+header ul li:hover {
   transform: scale(1.1);
   transition: 0.3s;
 }
