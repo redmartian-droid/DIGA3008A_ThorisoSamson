@@ -20,3 +20,16 @@ backToTopBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Highlight my current page's link in navbar by adding 'nav-current' class
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname.replace(/\/$/, ""); // remove trailing slash
+  const navLinks = document.querySelectorAll("nav a");
+
+  navLinks.forEach((link) => {
+    const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+    if (linkPath === currentPath) {
+      link.classList.add("nav-current"); // I can't really figure out why this is not working aside from in my index.html file
+    }
+  });
+});

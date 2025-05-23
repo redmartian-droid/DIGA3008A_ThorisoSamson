@@ -1,3 +1,4 @@
+/* Blog specific styles */
 main {
   padding: 30px 90px;
 }
@@ -7,6 +8,7 @@ main {
   border: 5px;
   border-style: solid;
   border-color: #000000;
+  border-radius: 25px;
   padding: 20px;
   margin-bottom: 30px;
   position: relative;
@@ -29,14 +31,22 @@ main {
   margin-bottom: 10px;
 }
 
-.h-entry p {
-  margin: 10px 0;
+/* Author and date information */
+article.h-entry > p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 30px;
+  font-style: italic;
 }
 
-.h-entry a {
+article.h-entry > p a {
   color: #000000;
   text-decoration: none;
   font-weight: bold;
+}
+
+article.h-entry > p a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {

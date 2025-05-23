@@ -27,11 +27,350 @@
           <li><a href="../profile/index.html">profile</a></li>
         </ul>
       </nav>
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <ul class="mobile-menu">
+          <li><a href="../index.html">home</a></li>
+          <li><a href="../blog/index.html">blog</a></li>
+          <li><a href="../design/index.html">design</a></li>
+          <li><a href="index.html">essay</a></li>
+          <li><a href="../portfolio/index.html">portfolio</a></li>
+          <li><a href="../profile/index.html">profile</a></li>
+        </ul>
+      </div>
     </header>
 
     <main>
       <h1>my essays.</h1>
-      <p>ignore the white space, if only my website could stay this simple.</p>
+
+      <article class="h-entry">
+        <h1 class="p-name">
+          Accessibility and Ethical UX Analysis: 24BitGameStudio Website
+        </h1>
+        <p>
+          Published by
+          <a class="p-author h-card" href="../../profile/index.html"
+            >Thoriso Samson</a
+          >
+          on
+          <time class="dt-published" datetime="2025-05-23">23 May 2025</time>
+        </p>
+        <div class="e-content">
+          <h2>Introduction</h2>
+          <p>
+            While first going through the 24BitGameStudio website, I initially
+            considered its general design elements, i.e., the font size
+            consistency, the purposeful utilisation of background colors to
+            direct users' attention, and the chromatic equilibrium that
+            accompanies their brand identity. A more critical inspection of the
+            site through the lens of web accessibility and ethical user
+            experience design principles, however, revealed several points that
+            merit further discussion. Website accessibility should not be
+            treated as a compliance matter alone; rather, it is a core
+            commitment to inclusive design that addresses the needs of all users
+            with or without disabilities. This essay aims to assess the
+            24BitGameStudio website's performance based on standard
+            accessibility guidelines and ethical user experience frameworks.
+          </p>
+
+          <h2>Visual Design Elements</h2>
+          <p>
+            The 24BitGameStudio website demonstrates thoughtful attention to
+            visual design, particularly in its consistent use of brand colors.
+            The background colors effectively differentiate sections and guide
+            the user's visual flow through the content. The navbar buttons also
+            provide interactive feedback, changing color upon hover (glowing
+            blue) and when pressed (turning red), the latter of which also
+            indicates to the user what page they are on, which provides clear
+            visual feedback, which enhances user interaction.
+          </p>
+          <p>
+            While the color coordination with the logo fosters a streamlined
+            visual experience, this does not necessarily guarantee accessibility
+            for users with color vision deficiencies or low vision. The website
+            primarily uses hues of blue, red, white, and dark grey. Although
+            these colors can be visually striking, they may still present
+            challenges if used without adequate contrast or if critical
+            information is conveyed through color alone. For example, users with
+            red-green color blindness, a common form of color vision deficiency,
+            may struggle to distinguish between certain shades of red and grey.
+          </p>
+          <p>
+            A notable accessibility issue concerns the site's interactive
+            elements. While navbar buttons change color when hovered or clicked,
+            standard buttons and form elements lack visual feedback for
+            interaction states. This absence of clear focus indicators violates
+            accessibility best practices and creates significant barriers for
+            keyboard users, particularly those with motor disabilities who can't
+            use a mouse. Without visible indicators showing their current
+            location during keyboard navigation, these users face unnecessary
+            difficulties interacting with the site.
+          </p>
+          <p>
+            Additionally, I observed inconsistencies in typography across the
+            website, particularly in the use of capitalisation. For example, the
+            contact page features text that is written entirely in uppercase
+            letters, in contrast to the rest of the site, excluding the game
+            preview section, which predominantly uses standard sentence case
+            (capitalised first letters followed by lowercase). While the use of
+            all caps may have been intended to create emphasis, such typographic
+            inconsistency can introduce cognitive friction for users. This is
+            especially true for individuals with cognitive disabilities, who
+            benefit from uniform and predictable visual patterns. All-caps text
+            can also reduce readability, as it disrupts the familiar shapes of
+            words that readers rely on for quick recognition. I found myself
+            suffering from that as well since I find familiarity comforting.
+          </p>
+          <p>
+            Despite this issue, the website maintains legible font sizes across
+            desktop, tablet, and mobile platforms, demonstrating an
+            understanding of responsive design principles. This adaptability is
+            important for accessibility, ensuring that text remains readable
+            across various devices and screen dimensions.
+          </p>
+
+          <h2>Content and Information Structure</h2>
+          <p>
+            A critical aspect of my accessibility testing involved using a
+            screen reader to navigate the 24BitGameStudio website, where I
+            encountered significant barriers related to image accessibility.
+            While using Microsoft Edge's immersive screen reader mode, I found
+            that images across the site were not being read aloud, posing a
+            substantial accessibility issue for visually impaired users who rely
+            on screen readers to access content.
+          </p>
+          <p>
+            Upon further inspection with developer tools, I noted that the
+            images, particularly in the service and client sections, were named
+            using generic filenames such as "service1," "service2," and
+            "client1." This naming convention introduces two primary
+            accessibility concerns:
+          </p>
+          <p>
+            First, even if the screen reader were properly configured, these
+            generic names offer no meaningful description of the image content.
+            For instance, a user might hear "client1" without understanding
+            which client the image represents or what the image itself depicts.
+            This lack of descriptive alt text directly contradicts Vaidya's
+            (2020) assertion that "the alternative text for each image must
+            convey the meaning the image is intended to communicate, not merely
+            describe what the image looks like."
+          </p>
+          <p>
+            Second, the failure to announce images in screen reader mode
+            suggests possible technical issues in the website's implementation,
+            such as missing alt attributes, improper ARIA roles, or problems
+            with the HTML structure. According to Vaidya (2020), "alternative
+            text is not required for decorative images," but logos and service
+            illustrations carry meaningful information and should be described
+            appropriately to accommodate non-visual users. The lack of these
+            descriptions further compounds the accessibility barriers that
+            visually impaired users face.
+          </p>
+          <p>
+            I also encountered a significant navigation barrier on the
+            home/about page. When activating the immersive screen reader mode,
+            the page is simplified visually, presumably to enhance readability.
+            However, this simplified version removed navigation options,
+            effectively trapping users on the page. As I noted during testing,
+            "When simplified, I cannot navigate to any other page. When I exit
+            this immersive screen reader mode, I can navigate freely to other
+            pages." This restricted experience violates core principles of
+            accessible design, which emphasise providing equal access for all
+            users, regardless of their method of interaction.
+          </p>
+          <p>
+            Furthermore, I found that the 'read aloud' feature on other pages
+            did not support image descriptions, creating an inconsistent user
+            experience. As I observed, I cannot activate the immersive screen
+            reader on those pages; instead, I can click on 'read aloud,' which
+            does not account for images. This inconsistency highlights potential
+            issues with the semantic structure of the website. Proper semantic
+            HTML is essential for screen reader compatibility, as it informs
+            assistive technologies how to interpret and navigate content. Vaidya
+            (2020) emphasises that "headings must be structured appropriately in
+            the design specifications. Skipping heading levels is not
+            recommended, as it disrupts the structure." Without a consistent
+            heading hierarchy and semantic markup, screen readers cannot
+            effectively communicate the organisation of content, making
+            navigation difficult.
+          </p>
+
+          <h3>Dynamic Content Accessibility</h3>
+          <p>
+            The inconsistent behavior between pages, where only the home/about
+            page changes its presentation in screen reader mode, suggests uneven
+            implementation of accessibility features. Such inconsistencies can
+            be particularly challenging for users with cognitive disabilities,
+            who benefit from predictable patterns and consistent behaviors.
+            Moreover, the 24BitGameStudio website features a section where
+            client logos scroll horizontally in a carousel format. While
+            visually engaging, this dynamic content presents several
+            accessibility challenges. The images in the carousel are generically
+            named (e.g., "client1"), which fails to provide meaningful
+            information to screen reader users.
+          </p>
+          <p>
+            Vaidya (2020) specifically addresses this issue, noting that "the
+            user should be given control to stop, pause, or hide any content or
+            information that appears on the interface that moves, blinks, or
+            scrolls." During my testing, I did not observe any controls that
+            would allow users to pause or control the carousel's movement,
+            suggesting non-compliance with this important accessibility
+            guideline.
+          </p>
+
+          <h3>Form Accessibility</h3>
+          <p>
+            The contact page features forms for user input, which present their
+            own set of accessibility considerations. While the slightly larger
+            font size on this page might enhance readability for some users,
+            other aspects of form accessibility require evaluation. For forms to
+            be fully accessible, they should include properly associated labels,
+            clear instructions, indication of required fields, and accessible
+            error validation that doesn't rely solely on color to convey
+            meaning. As Vaidya (2020) notes, "It is not a good practice to alert
+            the user when there is an error by just changing the labels of a
+            form to red color. Color should not be used as the only means to
+            indicate an action in an interface."
+          </p>
+          <p>
+            The 24BitGameStudio form does just that; however, the font size of
+            the text indicator for error validation, as well as its color
+            choice, makes it hard to read and a bit difficult to focus on. There
+            also seems to be a strange inconsistency regarding the headings'
+            color choice and that of the error validation, both are red;
+            however, the former is a brighter hue that contrasts well against
+            the background, while the other is a duller shade, which leads to
+            the accessibility issues noted earlier.
+          </p>
+
+          <h2>Data Collection and Privacy</h2>
+          <p>
+            While analysing, I came across a curious choice regarding the data
+            collection practices on the 24BitGameStudio website. The site
+            collects extensive personal information, including identifying,
+            contact, and demographic data, albeit for people or clients seeking
+            more information through their contact section. Despite this
+            comprehensive data gathering, the website lacks a cookie policy,
+            raising significant ethical concerns regarding informed consent and
+            transparency (Brignull, H., Leiser, M., Santos, C., and Doshi, K.,
+            2023).
+          </p>
+          <p>
+            As Geyser (n.d. a) argues, ethical web design must prioritise
+            "Privacy," "Transparency," and "Ethical Persuasion". This absence of
+            cookie notifications particularly affects users from regions with
+            strict privacy regulations like the EU, where GDPR mandates explicit
+            consent. While omitting such notices might create a smoother user
+            experience, it compromises ethical standards. Through the lens of
+            "Design Justice" (Costanza-Chock, 2020; Geyser, n.d. b), this
+            represents a problematic power imbalance between the website owner's
+            extensive data collection and users' limited awareness, potentially
+            violating ethical design principles.
+          </p>
+
+          <h2>User Experience and Interface Design</h2>
+          <p>
+            While the 24BitGameStudio website does not display overt cultural
+            insensitivity, it lacks consideration for local usability in a South
+            African context. The site is exclusively in English, which, while
+            commonly used in business, is only the fourth most spoken language
+            in the country, spoken by roughly 9% of the population. More widely
+            spoken languages like Zulu, Xhosa, and Afrikaans are notably absent,
+            as are the remaining official languages of South Africa. Although
+            users can rely on third-party translation tools, the absence of
+            built-in multilingual support may be perceived as tone-deaf or
+            exclusionary, especially given the country's linguistic diversity
+            and constitutional commitment to language equity.
+          </p>
+          <p>
+            Their website maintains visual consistency across most pages, which
+            should, in theory, support a predictable user experience. Font sizes
+            for headings and paragraph text are consistent, and the layout
+            adapts well across desktop, tablet, and mobile views. Additionally,
+            the use of different background colors to distinguish sections
+            effectively supports visual hierarchy and guides the user's eye,
+            helping to emphasise important content.
+          </p>
+          <p>
+            However, this visual consistency is undermined by significant
+            inconsistencies in accessibility, particularly in how the site
+            behaves with assistive technologies. Screen reader testing revealed
+            that only the about page adapts its presentation in reader mode,
+            while other pages remain unchanged. This creates an unpredictable
+            and potentially frustrating experience for users relying on screen
+            readers. Predictable navigation and consistent behavior are
+            especially critical for users with cognitive disabilities or those
+            unfamiliar with web conventions. As Vaidya (2020) emphasises,
+            information architecture should prioritise accessibility for elderly
+            users and those with cognitive challenges, with features like
+            always-visible menus.
+          </p>
+          <p>
+            Furthermore, while visual cues like background colors help with
+            organisation, they must be supported by proper semantic structure in
+            the code. The inconsistencies uncovered in screen reader performance
+            suggest that this underlying structure may not be fully accessible
+            or well-implemented.
+          </p>
+
+          <h2>Conclusion</h2>
+          <p>
+            This analysis reveals that the site's UI, UX, and IxD suffer from
+            not only technical oversights but also critical ethical failings.
+            The inconsistent support for assistive technologies, lack of focus
+            indicators, and segregated immersive reader experience demonstrate a
+            disregard for inclusive design, effectively marginalising users with
+            disabilities. These are not isolated design flaws, they reflect
+            broader systemic neglect of accessibility as a core value.
+          </p>
+          <p>
+            Equally troubling is the lack of data transparency, with missing
+            cookie policies and unclear consent mechanisms compromising user
+            autonomy and trust (Geyser, n.d. a). Ethical UX requires respect for
+            user agency and informed consent, both of which are undermined here.
+          </p>
+          <p>
+            As Vaidya (2020) asserts, accessibility and inclusion should not be
+            retrofitted but rather integrated into design from its earliest
+            stages. The failure to do so in this case exemplifies a broader
+            systemic issue in digital design, where accessibility is often
+            deprioritised in favor of aesthetic or commercial goals. This
+            neglect not only reinforces existing power imbalances, excluding
+            those with less access or fewer abilities, but also contradicts the
+            foundational ideals of user-centered design.
+          </p>
+
+          <h2>References</h2>
+          <cite>
+            <a href="https://24bitgames.com/"
+              >24Bit Games (n.d.) 24Bit Games.</a
+            >
+            <a href="https://www.deceptive.design/laws"
+              >Brignull, H., Leiser, M., Santos, C. and Doshi, K., 2023.
+              Deceptive patterns.</a
+            >
+            <a href="https://library.oapen.org/handle/20.500.12657/43542"
+              >Costanza-Chock, S., 2020. Design justice: Community-led practices
+              to build the worlds we need. The MIT Press.</a
+            >
+            Geyser, H., (n.d. a). Ethics of UX Practice. University of
+            Witwatersrand.
+            <br />
+            Geyser, H., (n.d. b). Internet, Society and Design Justice - So what
+            do we do? University of Witwatersrand.
+            <br />
+            <a
+              href="https://medium.com/design-ibm/accessibility-guidelines-for-information-architecture-ux-design-and-visual-design-5ae33ed1d52d"
+              >Vaidya, M. (2020). Accessibility: Guidelines for Information
+              Architecture, UX Design, and Visual Design. IBM Design.</a
+            >
+          </cite>
+        </div>
+      </article>
     </main>
 
     <footer class="footer-h">
@@ -57,5 +396,8 @@
         />
       </div>
     </footer>
+
+    <button id="back-to-top" class="back-to-top-btn">↑</button>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

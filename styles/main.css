@@ -1,3 +1,5 @@
+/* Global styles for all pages */
+
 * {
   padding: 0;
   margin: 0;
@@ -23,6 +25,10 @@ p {
   font-family: sans-serif;
 }
 
+.nav-current {
+  font-weight: bold;
+}
+
 header a {
   text-decoration: none;
 }
@@ -31,6 +37,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: sticky;
+  top: 20px;
+  z-index: 999;
 
   height: 100px;
   padding: 0 20px;
@@ -79,6 +89,8 @@ ul li:hover {
 .profile {
   height: 100vh;
   padding: 30px 90px;
+  display: flex;
+  align-items: center; /* This better work now */
 }
 
 .hero h1 {
@@ -90,7 +102,7 @@ ul li:hover {
 }
 
 .intro h2 {
-  font-size: 5rem;
+  text-align: right;
 }
 
 #grid {
@@ -106,11 +118,14 @@ ul li:hover {
 }
 
 .profile {
+  justify-content: center;
+}
+
+.profile-content {
   text-align: center;
 }
 
 .profile h2 {
-  font-size: 5rem;
   text-align: center;
 }
 
@@ -122,6 +137,12 @@ ul li:hover {
   border-radius: 50px;
   display: inline-block;
   font-size: 36px;
+}
+
+.profile-image {
+  width: 300px; /* Set the width of the image */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 50%; /* Optional: if you want a circular image */
 }
 
 .blogs {
@@ -148,6 +169,7 @@ ul li:hover {
 .h-entry {
   background-color: #ffffff;
   display: flex;
+  border-radius: 25px;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
@@ -167,8 +189,21 @@ ul li:hover {
   font-weight: bold;
 }
 
-article.h-entry p {
-  font-size: 18px;
+article.h-entry > p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+article.h-entry > p a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article.h-entry > p a:hover {
+  text-decoration: underline;
 }
 
 .footer-h {
@@ -179,7 +214,7 @@ article.h-entry p {
   justify-content: space-between;
   align-items: center;
   width: 100%; /* Ensures full width */
-  margin: 0; /* Remove any margin that might prevent full width */
+  margin: 0; /* Remove any margin that might end up preventing the use full width */
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
@@ -285,16 +320,23 @@ article.h-entry p {
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 50px;
-  left: 0;
-  height: calc(100vh - 50px);
-  width: 100%;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 25px;
+  border-width: 3px;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  width: 90%;
 }
 
 .mobile-menu li {
   margin-bottom: 10px;
 }
 
+/* Tablet Media Query (768px - 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   body {
     font-size: 16px;
@@ -308,12 +350,35 @@ article.h-entry p {
     font-size: 3rem;
   }
 
+  /* Tablet Header Adjustments */
+  header {
+    height: 80px;
+    padding: 0 15px;
+    margin: 15px 40px;
+    border-width: 4px;
+    border-radius: 20px;
+  }
+
+  #name {
+    font-size: 20px;
+  }
+
+  ul li {
+    padding: 15px;
+    margin-left: 8px;
+  }
+
   header nav {
     display: none;
   }
 
   #hamburger-icon {
     display: block;
+  }
+
+  #hamburger-icon div {
+    width: 30px;
+    height: 3px;
   }
 
   .hero,
@@ -329,7 +394,7 @@ article.h-entry p {
   }
 
   .intro h2 {
-    text-align: left; /* Maintain left alignment on tablet */
+    text-align: left;
   }
 
   #grid {
@@ -393,12 +458,36 @@ article.h-entry p {
     font-size: 2rem;
   }
 
+  /* Mobile Header Adjustments */
+  header {
+    height: 60px;
+    padding: 0 10px;
+    margin: 10px 15px;
+    border-width: 3px;
+    border-radius: 15px;
+  }
+
+  #name {
+    font-size: 18px;
+  }
+
+  ul li {
+    padding: 10px;
+    margin-left: 5px;
+  }
+
   header nav {
     display: none;
   }
 
   #hamburger-icon {
     display: block;
+  }
+
+  #hamburger-icon div {
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
   }
 
   .hero,

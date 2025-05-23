@@ -1,28 +1,58 @@
-/* NB: two-column layout for the main content area*/
+/* Blogpost specific styles */
+/* NB: removed two-column layout for the main content area since it was too much trouble to maintain. After experimenting with the essay section's styling, I decided to just go with that aesthetic instead*/
 main {
+  background-color: #ffffff;
+  margin: 20px auto;
+  padding: 40px 60px;
   width: 80%;
-  margin: 30px auto;
+  border: 5px solid #000000;
+  border-radius: 25px;
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 2rem;
+  line-height: 1.7;
 }
 
 article.h-entry {
-  background-color: #ffffff;
-  border: 5px;
-  border-style: solid;
-  border-color: #000000;
-  padding: 1rem;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
 article.h-entry h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #000000;
+  line-height: 1.3;
+  border-bottom: 3px solid #000000;
+  padding-bottom: 20px;
 }
 
 article.h-entry h2 {
-  font-size: 1.6rem;
-  margin-top: 1.5rem;
+  font-size: 2.2rem;
+  margin: 40px 0 20px 0;
+  padding-bottom: 10px;
+  color: #000000;
+  border-bottom: 2px solid #c1ff72;
+}
+
+/* Author and date information */
+article.h-entry > p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+article.h-entry > p a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article.h-entry > p a:hover {
+  text-decoration: underline;
 }
 
 section.recommended-blogs {
@@ -36,6 +66,8 @@ section.recommended-blogs h2 {
   margin: 0;
   font-size: 1.8rem;
   text-align: center;
+  border-bottom: 2px solid #c1ff72;
+  padding-bottom: 10px;
 }
 
 .blog-grid {
@@ -45,45 +77,44 @@ section.recommended-blogs h2 {
 }
 
 .blog-grid article.h-entry {
-  border: 5px;
-  border-style: solid;
-  border-color: #000000;
+  border: 4px solid #000000;
   background-color: #ffffff;
   padding: 1rem;
+  border-radius: 15px;
 }
 
 .blog-grid article.h-entry h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
+  color: #000000;
 }
 
 .blog-grid article.h-entry p {
   font-size: 0.95rem;
   margin: 0.25rem 0;
+  color: #333333;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   main {
     width: 90%;
     grid-template-columns: 2fr 1fr;
-    gap: 1.5rem;
     margin: 25px auto;
+    padding: 30px 40px;
+    border-width: 4px;
+    border-radius: 20px;
   }
 
   article.h-entry h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   article.h-entry h2 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   section.recommended-blogs h2 {
     font-size: 1.5rem;
-  }
-
-  .blog-grid article.h-entry {
-    border-width: 4px;
   }
 
   .blog-grid article.h-entry h3 {
@@ -96,17 +127,33 @@ section.recommended-blogs h2 {
     width: 95%;
     grid-template-columns: 1fr;
     margin: 15px auto;
+    padding: 20px 25px;
+    border-width: 3px;
+    border-radius: 15px;
+  }
+
+  article.h-entry h1 {
+    font-size: 2rem;
+  }
+
+  article.h-entry h2 {
+    font-size: 1.5rem;
+  }
+
+  article.h-entry p {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .blog-grid article.h-entry h3 {
+    font-size: 1rem;
+  }
+
+  .blog-grid article.h-entry p {
+    font-size: 0.9rem;
   }
 
   section.recommended-blogs {
     order: 2;
-  }
-
-  article.h-entry h1 {
-    font-size: 2.5rem;
-  }
-
-  article.h-entry h2 {
-    font-size: 1.6rem;
   }
 }
