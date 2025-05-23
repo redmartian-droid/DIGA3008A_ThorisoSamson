@@ -2,10 +2,6 @@ main {
   padding: 30px 90px;
 }
 
-h1 {
-  text-align: right;
-}
-
 .h-entry {
   background-color: #ffffff;
   border: 5px;
@@ -18,13 +14,13 @@ h1 {
 }
 
 .h-entry:nth-child(odd) {
-  margin-left: auto;
-  margin-right: 30px;
+  margin-left: 30px;
+  margin-right: auto;
 }
 
 .h-entry:nth-child(even) {
-  margin-left: 30px;
-  margin-right: auto;
+  margin-left: auto;
+  margin-right: 30px;
 }
 
 .h-entry h2 {
