@@ -1,7 +1,91 @@
 /* Design specific styles */
 
-.design {
-  padding: 30px 90px;
+main {
+  background-color: #ffffff;
+  margin: 20px 80px;
+  padding: 40px 60px;
+  border: 5px solid #000000;
+  border-radius: 25px;
+  line-height: 1.7;
+}
+
+/* Essay title styling */
+main h1 {
+  font-size: 3.5rem;
+  color: #000000;
+  margin-bottom: 40px;
+  text-align: center;
+  border-bottom: 3px solid #000000;
+  padding-bottom: 20px;
+}
+
+/* Article container */
+article.h-entry {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+/* Essay article title */
+article.h-entry h1.p-name {
+  font-size: 2.8rem;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* Author and date information */
+article.h-entry > p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+article.h-entry > p a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article.h-entry > p a:hover {
+  text-decoration: underline;
+}
+
+/* Content container */
+.e-content {
+  max-width: none;
+}
+
+/* Section headings */
+.e-content h2 {
+  font-size: 2.2rem;
+  color: #000000;
+  margin: 40px 0 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #c1ff72;
+}
+
+.e-content h3 {
+  font-size: 1.8rem;
+  color: #000000;
+  margin: 30px 0 15px 0;
+  font-weight: bold;
+}
+
+/* Paragraph styling */
+.e-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #333333;
+}
+
+/* First paragraph of each section */
+.e-content h2 + p {
+  margin-top: 20px;
 }
 
 .wireframes {
@@ -24,24 +108,107 @@
   border-color: #000000;
   border-radius: 25px;
   max-width: fit-content;
-  margin-bottom: 30px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .wireframes-h img {
-  width: 600px;
-  height: 456.25px;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
-.references a {
+/* References section */
+.e-content cite {
+  display: block;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-left: 5px solid #c1ff72;
+  border-radius: 5px;
+}
+
+.e-content cite a {
   color: #000000;
-  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.e-content cite a:hover {
+  text-decoration: underline;
+  color: #333333;
+}
+
+/* Non-linked citations */
+.e-content cite a:not([href]) {
+  color: #333333;
+  cursor: default;
+}
+
+/* Blockquotes if needed */
+.e-content blockquote {
+  margin: 20px 0;
+  padding: 15px 20px;
+  background-color: #f5f5f5;
+  border-left: 4px solid #c1ff72;
+  font-style: italic;
+}
+
+/* Links within content */
+.e-content a {
+  color: #000000;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.e-content a:hover {
+  color: #333333;
   text-decoration: none;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .design {
-    padding: 15px 20px;
+  main {
+    margin: 15px 40px;
+    padding: 30px 40px;
+    border-width: 4px;
+    border-radius: 20px;
+  }
+
+  main > h1 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+  }
+
+  article.h-entry h1.p-name {
+    font-size: 2.2rem;
+  }
+
+  .e-content h2 {
+    font-size: 1.8rem;
+    margin: 30px 0 15px 0;
+  }
+
+  .e-content h3 {
+    font-size: 1.5rem;
+    margin: 25px 0 12px 0;
+  }
+
+  .e-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .e-content cite {
+    padding: 15px;
+  }
+
+  .e-content cite a {
+    font-size: 14px;
   }
 
   .wireframes,
@@ -56,8 +223,54 @@
 }
 
 @media screen and (max-width: 767px) {
-  .design {
-    padding: 15px 20px;
+  main {
+    margin: 10px 15px;
+    padding: 20px 25px;
+    border-width: 3px;
+    border-radius: 15px;
+  }
+
+  main > h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+
+  article.h-entry h1.p-name {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+
+  article.h-entry > p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .e-content h2 {
+    font-size: 1.5rem;
+    margin: 25px 0 12px 0;
+  }
+
+  .e-content h3 {
+    font-size: 1.3rem;
+    margin: 20px 0 10px 0;
+  }
+
+  .e-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .e-content cite {
+    padding: 12px;
+    margin-top: 25px;
+  }
+
+  .e-content cite a {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 8px;
   }
 
   .wireframes,

@@ -141,8 +141,10 @@ article.h-entry > p a:hover {
 }
 
 /* Print styles */
-@media print {
+/* @media print {
   main {
+
+  /* might not need this rn
     margin: 0;
     border: none;
     box-shadow: none;
