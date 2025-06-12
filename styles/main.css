@@ -17,6 +17,7 @@ body {
   filter: blur(10px);
   pointer-events: none;
   user-select: none;
+  transition: 0.2s;
 }
 
 h1 {
