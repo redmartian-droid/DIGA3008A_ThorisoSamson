@@ -10,6 +10,13 @@ body {
   background-color: #c1ff72;
   font-size: 18px;
   line-height: 1.5;
+  transition: 0.5s;
+}
+
+#blur.active {
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
 }
 
 h1 {

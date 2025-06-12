@@ -1,6 +1,11 @@
 // Menu toggle functionality
 function toggleMobileMenu(menu) {
   menu.classList.toggle("open");
+
+  var blur = document.getElementById("blur");
+  if (blur) {
+    blur.classList.toggle("active");
+  }
 }
 
 // Back to top button functionality
