@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/portfolio.css" />
 
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/portfolio_filter.js" defer></script>
+
     <title>DIGA3008</title>
   </head>
 
@@ -44,52 +47,61 @@
 
     <main>
       <h1>my portfolio.</h1>
-      <section class="portfolio">
-        <div class="portfolio-item">
-          <h3>evil dead arise.</h3>
-          <img
-            src="../images/portfolio images/evil dead arise.png"
-            alt="A picture of a zombie survival game I made."
-            width="360"
-            height="360"
-          />
-          <p>
-            a game about shooting zombies in the woods and gathering lost relics
-            fom a past life.
-          </p>
-          <a href="../media/Evil Dead Arise.zip" download>
-            <button>download project</button>
-          </a>
-        </div>
-        <div class="portfolio-item">
-          <h3>rise!</h3>
-          <img
-            src="../images/portfolio images/rise.png"
-            alt="A picture of a shooter game I made."
-            width="360"
-            height="360"
-          />
-          <p>
-            a gae about a wartorn city that you must defend from alien forces.
-          </p>
-          <a href="../media/Rise Game v.0.2.zip" download>
-            <button>download project</button>
-          </a>
-        </div>
-        <div class="portfolio-item">
-          <h3>air hockey game.</h3>
-          <img
-            src="../images/portfolio images/air hockey game.png"
-            alt="A picture of me."
-            width="360"
-            height="360"
-          />
-          <p>a game about playing air hockey with a teleproting twist.</p>
-          <a href="../media/Air Hockey Game.zip" download>
-            <button>download project</button>
-          </a>
-        </div>
-      </section>
+      <div class="filter-buttons">
+        <button class="active" data-name="all">All</button>
+        <button data-name="websites">Websites</button>
+        <button data-name="games">Games</button>
+        <button data-name="art">Art</button>
+      </div>
+
+      <div class="filterable-content">
+        <section class="portfolio">
+          <div class="portfolio-item" data-name="games">
+            <h3>evil dead arise.</h3>
+            <img
+              src="../images/portfolio images/evil dead arise.png"
+              alt="A picture of a zombie survival game I made."
+              width="360"
+              height="360"
+            />
+            <p>
+              a game about shooting zombies in the woods and gathering lost
+              relics fom a past life.
+            </p>
+            <a href="../media/Evil Dead Arise.zip" download>
+              <button>download project</button>
+            </a>
+          </div>
+          <div class="portfolio-item" data-name="games">
+            <h3>rise!</h3>
+            <img
+              src="../images/portfolio images/rise.png"
+              alt="A picture of a shooter game I made."
+              width="360"
+              height="360"
+            />
+            <p>
+              a gae about a wartorn city that you must defend from alien forces.
+            </p>
+            <a href="../media/Rise Game v.0.2.zip" download>
+              <button>download project</button>
+            </a>
+          </div>
+          <div class="portfolio-item" data-name="games">
+            <h3>air hockey game.</h3>
+            <img
+              src="../images/portfolio images/air hockey game.png"
+              alt="A picture of me."
+              width="360"
+              height="360"
+            />
+            <p>a game about playing air hockey with a teleproting twist.</p>
+            <a href="../media/Air Hockey Game.zip" download>
+              <button>download project</button>
+            </a>
+          </div>
+        </section>
+      </div>
     </main>
 
     <footer class="footer-h">
@@ -111,6 +123,5 @@
     </footer>
 
     <button id="back-to-top" class="back-to-top-btn">↑</button>
-    <script src="../scripts/script.js"></script>
   </body>
 </html>

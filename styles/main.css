@@ -211,6 +211,7 @@ article.h-entry > p a:hover {
   color: #ffffff;
   padding: 20px 90px; /* Keep original padding but ensure full width */
   display: flex;
+
   justify-content: space-between;
   align-items: center;
   width: 100%; /* Ensures full width */
