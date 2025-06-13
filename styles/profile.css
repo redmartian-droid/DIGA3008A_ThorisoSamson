@@ -114,6 +114,14 @@ main img {
   border: none;
 }
 
+.interests img {
+  display: none;
+}
+
+.bw-filter {
+  filter: grayscale(100%);
+}
+
 @media (max-width: 768px) {
   .profile-h {
     flex-direction: column;

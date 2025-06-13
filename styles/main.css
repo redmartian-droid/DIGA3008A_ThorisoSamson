@@ -244,10 +244,9 @@ article.h-entry > p a:hover {
   margin-left: 10px;
 }
 
-.footer-images {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+.footer-h img:hover {
+  transform: scale(1.5);
+  transition: 0.3s;
 }
 
 /* Back to Top Button Styling */
