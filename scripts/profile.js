@@ -21,7 +21,9 @@ function showTab(tabName) {
   }
 
   // Add active class to the clicked button
-  const clickedButton = e.target;
+  const clickedButton = document.querySelector(
+    `button[onclick="showTab('${tabName}')"]`
+  ); // Find the button that was clicked, define target more accurately
   if (clickedButton) {
     clickedButton.classList.add("active");
   }
