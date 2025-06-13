@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/profile.css" />
 
+    <script src="../scripts/profile.js" defer></script>
+
     <title>DIGA3008</title>
   </head>
 
@@ -69,7 +71,58 @@
             models in my free time as well, although that's mostly on account of
             being self-taught.
           </p>
+
+          <div class="info-tabs">
+            <button class="tab active" onclick="showTab('skills')">
+              Skills
+            </button>
+            <button class="tab" onclick="showTab('experience')">
+              Experience
+            </button>
+            <button class="tab" onclick="showTab('education')">
+              Education
+            </button>
+          </div>
+
+          <div class="tab-content active" id="skills">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>C#</li>
+              <li>TypeScript</li>
+            </ul>
+          </div>
+
+          <div class="tab-content" id="experience">
+            <ul>
+              <li>Web Development</li>
+              <li>Game Development</li>
+              <li>Machine Learning</li>
+              <li>Data Analysis</li>
+            </ul>
+          </div>
+
+          <div class="tab-content" id="education">
+            <ul>
+              <li>Westridge High School</li>
+              <li>University of Witwatersrand</li>
+            </ul>
+          </div>
         </div>
+      </section>
+
+      <section class="js-competency">
+        <input type="text" id="pokemonName" placeholder="Enter Pokémon name" />
+        <button onClick="fetchData()">Fetch Pokémon Data</button><br />
+
+        <img
+          src=""
+          alt="Pokemon Sprite"
+          id="pokemonSprite"
+          style="display: none"
+        />
       </section>
     </main>
 
@@ -93,5 +146,6 @@
 
     <button id="back-to-top" class="back-to-top-btn">↑</button>
     <script src="../scripts/script.js"></script>
+    <script src="../scripts/random-generator.js"></script>
   </body>
 </html>

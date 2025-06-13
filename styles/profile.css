@@ -2,7 +2,6 @@
 
 main {
   padding: 30px 90px;
-  margin-bottom: 100px;
 }
 
 main img {
@@ -17,6 +16,7 @@ main img {
   justify-content: space-between;
   margin-top: 100px;
   align-items: flex-start;
+  min-height: 500px;
 }
 
 .image-container {
@@ -47,6 +47,26 @@ main img {
   font-size: 20px;
   line-height: 1.8;
   text-align: left;
+}
+
+.info-tabs button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  margin: 20px 10px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab.active {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
