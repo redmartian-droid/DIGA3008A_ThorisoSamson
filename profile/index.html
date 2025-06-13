@@ -6,15 +6,17 @@
     <meta name="author" content="Thoriso Samson" />
     <meta
       name="description"
-      content="This is a profile page to learn more about me."
+      content="Profile of Thoriso Samson, University of Witwatersrand Digital Arts student. Skills include C#, Python, JavaScript, TypeScript, web development, game development, and machine learning projects."
     />
 
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/profile.css" />
 
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/random-generator.js" defer></script>
     <script src="../scripts/profile.js" defer></script>
 
-    <title>DIGA3008</title>
+    <title>DIGA3008 - Thoriso Samson Profile</title>
   </head>
 
   <body>
@@ -114,10 +116,12 @@
           I like Pokemon a ton too, it's actually one of the main reasons I
           decided to take up game design, my personal favourite from the first
           three generations is Ivysaur. Click the button below to fetch a random
-          Pokémon's data from the PokeAPI and see how many you can remember!
+          Pokémon's data from the PokeAPI and see how many you can remember! My
+          personal score is 81.
         </p>
         <input type="text" id="pokemonName" placeholder="Enter Pokémon name" />
         <button onClick="fetchData()">Fetch Pokémon Data</button><br />
+        <div id="pokemonCounter">Pokémon guessed: 0</div>
 
         <img src="" alt="Pokemon Sprite" id="pokemonSprite" class="bw-filter" />
       </section>
@@ -142,7 +146,5 @@
     </footer>
 
     <button id="back-to-top" class="back-to-top-btn">↑</button>
-    <script src="../scripts/script.js"></script>
-    <script src="../scripts/random-generator.js"></script>
   </body>
 </html>
