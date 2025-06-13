@@ -78,6 +78,10 @@ main img {
   border-radius: 25px;
 }
 
+.interests h2 {
+  font-size: 3rem;
+}
+
 .interests input {
   width: 50%;
   padding: 10px;
